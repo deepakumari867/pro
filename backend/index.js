@@ -13,7 +13,32 @@ import contactRoutes from "./routes/contactRoute.js";
 
 dotenv.config();
 const app=express();
-app.use(cors());
+// app.use(cors());
+
+const allowedOrigins = [
+  "http://localhost:5173",
+"http://localhost:5174",
+  "https://pro-1-hhfc.onrender.com"
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    // allow requests with no origin (like mobile apps or curl)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    } else {
+      return callback(new Error("CORS not allowed for this origin"), false);
+    }
+  },
+  credentials: true
+}));
+
+
+
+
+
+
 app.use(bodyParser.json());
 // api end points nmsdjbbjhb 
 
