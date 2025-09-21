@@ -18,7 +18,8 @@ const app=express();
 const allowedOrigins = [
   "http://localhost:5173",
 "http://localhost:5174",
-  "https://pro-1-hhfc.onrender.com"
+  "https://pro-1-hhfc.onrender.com",
+  "https://rajaadmin.onrender.com"
 ];
 
 app.use(cors({
