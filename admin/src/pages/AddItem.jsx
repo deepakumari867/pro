@@ -115,7 +115,8 @@ const AddItem = ({ refreshItems }) => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/product/add",
+        // "http://localhost:5000/api/product/add",
+        "https://pro-2w8m.onrender.com/api/product/add",
         formData,
         {
           headers: {

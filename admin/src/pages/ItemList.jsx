@@ -9,7 +9,8 @@ const ItemList = () => {
 
   const fetchItems = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/product/all");
+      // const res = await axios.get("http://localhost:5000/api/product/all");
+      const res = await axios.get("https://pro-2w8m.onrender.com/api/product/all");
       if (res.data.success) setItems(res.data.products);
     } catch (err) {
       console.error("Failed to fetch items", err);

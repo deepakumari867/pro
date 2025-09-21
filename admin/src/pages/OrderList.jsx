@@ -418,7 +418,8 @@ const OrderList = () => {
 
       try {
         const { data } = await axios.get(
-          "http://localhost:5000/api/order/admin/all",
+          // "http://localhost:5000/api/order/admin/all",
+          "https://pro-2w8m.onrender.com/api/order/admin/all",
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setOrders(data || []);
